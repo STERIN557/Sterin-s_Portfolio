@@ -80,6 +80,23 @@ function endStuff(interval) {
   clearInterval(interval);
 }
 
-setTimeout(() => {
-  printText();
-}, 1000);
+// setTimeout(() => {
+//   printText();
+// }, 1000);
+
+// click on the scrollView
+
+const clickImageS = document.querySelectorAll(".imagess");
+const home = document.getElementById("mainPage");
+const courses = document.getElementById("courseOut");
+const technology = document.getElementById("techOut");
+const project = document.getElementById("proOut");
+const social_network = document.getElementById("aboutOut");
+const buttonArray = [home, courses, technology, project, social_network];
+
+for (let o = 0; o < clickImageS.length; o++) {
+  clickImageS[o].addEventListener("click", () => {
+    console.log("fsdf");
+    buttonArray[o].scrollIntoView();
+  });
+}
