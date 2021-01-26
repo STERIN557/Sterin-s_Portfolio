@@ -7,20 +7,25 @@
   display: none;
 }
 
-html {
+/* html {
   display: flex;
   position: relative;
-}
+} */
 
+html,
 body {
-  display: flex;
-  position: relative;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  flex-direction: column;
 }
+
+/* body { */
+/* background-color: #8e44ad; */
+/* margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
 
 #mainPage {
   display: flex;
@@ -44,9 +49,9 @@ body {
   position: relative;
   height: 15rem;
   width: 15rem;
-  right: 7rem;
+  right: 20%;
   border-radius: 50%;
-  top: -4rem;
+  top: -17%;
   border: 20px solid rgb(0, 128, 255);
 
   cursor: pointer;
@@ -127,10 +132,11 @@ body {
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 #courseOut {
@@ -166,31 +172,35 @@ body {
 .courseInnerBox {
   display: flex;
   position: absolute;
-  flex-direction: row;
-  padding: 1rem;
+
   /* top: 2rem; */
-  height: 75vh;
-  width: 99.99vw;
+  height: 87vh;
+  width: 100vw;
+  /* z-index: 10; */
   /* background-color: black; */
 
-  justify-content: center;
-  align-items: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: row;
+
+  overflow: scroll;
 
   /* z-index: 20; */
 }
 
 .certiBox {
-  display: flex;
+  display: block;
   position: relative;
+  flex-shrink: 0;
   cursor: pointer;
-  height: 90%;
-  width: 50%;
+  height: 60%;
+  width: 40%;
   background-color: #fff;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin: 3rem;
+  margin-left: 3rem;
+  align-self: center;
+
   border: 10px solid white;
   transition-duration: 0.1s;
   border-radius: 10px;
@@ -199,13 +209,13 @@ body {
   overflow: hidden;
 }
 
-.certiBox:hover {
+/* .certiBox:hover {
   height: 95%;
   width: 55%;
-}
+} */
 
 .certiImage img {
-  display: flex;
+  display: block;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -254,268 +264,48 @@ body {
 .covering {
   display: flex;
   position: absolute;
+  /* justify-content: center; */
+  /* overflow: scroll; */
+  overflow: hidden;
   height: 90vh;
   width: 90vw;
-  background-color: rgba(255, 255, 255, 0.308);
-
-  clip-path: polygon(
-    0% 20%,
-    60% 20%,
-    60% 0%,
-    100% 50%,
-    60% 100%,
-    60% 80%,
-    0% 80%
-  );
 }
 
 .techIknow {
+  display: grid;
+  position: absolute;
+  gap: 15rem;
+  grid-template-columns: auto auto auto auto;
+
+  /* align-self: flex-end; */
+
+  /* background-color: #fff; */
+  /* padding: 1; */
+  overflow: scroll;
+  height: 90vh;
+  margin-top: 10rem;
+
+  width: 99.8vw;
+  /* left: 5%; */
+  bottom: 5%;
+}
+
+.courseThum img {
   display: flex;
   position: absolute;
-  align-self: flex-end;
-  flex-direction: row;
-  overflow: hidden;
-  overflow-x: scroll;
-  /* padding: 1; */
-  height: 90vh;
-  width: 100vw;
-}
-
-.tec1 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
+  height: 10rem;
+  /* top: 2rem; */
+  /* margin: 5px; */
+  width: 10rem;
+  margin-right: 5rem;
+  margin-left: 2rem;
+  /* margin: 2rem; */
+  margin-top: 2rem;
   background-color: #fff;
-  top: 2rem;
-  left: 5rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-.tec2 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  top: 20rem;
-  left: -8rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(
-    50% 0%,
-    80% 10%,
-    100% 35%,
-    100% 70%,
-    80% 90%,
-    50% 100%,
-    20% 90%,
-    0% 70%,
-    0% 35%,
-    20% 10%
-  );
-}
-
-.tec3 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-
-  left: 8rem;
-  top: 25rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-}
-
-.tec4 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: -10rem;
-  top: 5rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 75%,
-    75% 75%,
-    75% 100%,
-    50% 75%,
-    0% 75%
-  );
-}
-.tec5 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: 8rem;
-  top: 25rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}
-
-.tec6 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: 8rem;
-  top: 26rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: circle(50% at 50% 50%);
-}
-
-.tec7 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: -10rem;
-  top: 10rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-
-.tec8 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: -8rem;
-  top: 25rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-}
-
-.tec9 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: -4rem;
-  top: 25rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-}
-
-.tec10 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: -20rem;
-  top: 2rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-
-  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-.tec11 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: #fff;
-  left: 1rem;
-  top: 8rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-.tec12 {
-  display: flex;
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-  background-color: rgb(255, 255, 255);
-  left: -30rem;
-  top: 7rem;
-  padding: 4rem;
-  color: dodgerblue;
-  font-size: 25px;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem;
-  margin-right: 4rem;
-  clip-path: polygon(0 0, 100% 0, 100% 26%, 0% 100%);
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid rgba(12, 12, 15, 0.151);
+  box-shadow: 0px 10px 10px 2px rgba(15, 15, 17, 0.123);
 }
 
 #technology {
@@ -616,26 +406,18 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 28%);
 }
 
-#boxForHome {
-  display: flex;
-  position: absolute;
-  height: 40rem;
-  width: 40rem;
-  /* background-color: red; */
-  margin-top: 1rem;
-  justify-content: center;
-}
-
 #MyMessage {
   display: flex;
   position: relative;
-  font-size: 40px;
-  font-weight: lighter;
-  right: 20rem;
-  top: 3rem;
+  font-size: 30px;
+  /* font-weight: lighter; */
+  right: -21%;
+  top: 57%;
+  z-index: 1;
+
   color: white;
   font-family: "Bungee", cursive;
-  text-shadow: 2px 5px rgba(0, 0, 0, 0.253);
+  text-shadow: 2px 5px rgba(255, 255, 255, 0.253);
 }
 
 #sideBar {

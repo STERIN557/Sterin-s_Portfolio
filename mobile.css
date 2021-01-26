@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 964px) {
   #heading,
   #headingCourse,
   #headingTechnology,
@@ -19,45 +19,96 @@
     position: relative;
     height: 10rem;
     width: 10rem;
-    right: 26%;
+    right: 35%;
     border-radius: 50%;
-    top: -12%;
+    top: -30%;
 
-    border: 5px solid rgb(0, 128, 255);
-
+    border: 15px solid rgb(0, 183, 255);
+    margin-top: 1rem;
     cursor: pointer;
-    box-shadow: 0px 10px 10px 2px rgba(0, 60, 255, 0.281);
-    /* animation: borderVariation 1.5s ease-in-out; */
+    box-shadow: 0px 10px 10px 2px rgba(0, 132, 255, 0.281);
+    animation: borderVariation 1.5s ease-in-out;
+  }
+
+  @keyframes borderVariation {
+    from {
+      border: 0px solid rgb(0, 183, 255);
+      filter: grayscale(20);
+    }
+
+    to {
+      border: 15px solid rgb(0, 183, 255);
+      filter: grayscale(0);
+    }
   }
 
   #MyMessage {
     display: flex;
     position: relative;
     font-size: 20px;
-    font-weight: lighter;
-    right: -18%;
-    top: 5%;
+    /* font-weight: lighter; */
+    right: 5%;
+    top: 37%;
+    z-index: 1;
+    text-align: center;
+    text-overflow: clip;
     color: white;
     font-family: "Bungee", cursive;
-    text-shadow: 2px 5px rgba(0, 0, 0, 0.253);
+    text-shadow: 2px 5px rgba(255, 255, 255, 0.253);
   }
 
   .courseInnerBox {
     display: flex;
     position: absolute;
-    flex-direction: column;
-    padding: 1rem;
+
     /* top: 2rem; */
-    height: 75vh;
-    width: 99.99vw;
+    height: 87vh;
+    width: 100vw;
+    /* z-index: 10; */
     /* background-color: black; */
 
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    /* object-fit: cover; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-direction: column;
+
+    overflow: scroll;
+    /* justify-self: flex-end; */
 
     /* z-index: 20; */
+  }
+
+  .certiBox {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    height: 57%;
+    width: 80%;
+    background-color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+
+    border: 10px solid white;
+    transition-duration: 0.1s;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 2px rgba(11, 11, 14, 0.432),
+      inset 0px 10px 10px 2px rgba(11, 11, 14, 0.185);
+    overflow: hidden;
+  }
+
+  /* .certiBox:hover {
+    height: 95%;
+    width: 55%;
+  } */
+
+  .certiImage img {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border: 1px solid rgba(7, 7, 8, 0.144);
   }
 }
