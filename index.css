@@ -51,7 +51,7 @@ body {
 
   cursor: pointer;
   box-shadow: 0px 10px 10px 2px rgb(0, 60, 255);
-  /* animation: borderVariation 1.5s ease-in-out; */
+  animation: borderVariation 1.5s ease-in-out;
 }
 
 @keyframes borderVariation {
@@ -81,7 +81,7 @@ body {
     rgb(0, 68, 255)
   );
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 28%);
-  /* animation: change 1s ease-in-out; */
+  animation: change 1s ease-in-out;
 }
 
 @keyframes change {
@@ -108,7 +108,7 @@ body {
   top: 4rem;
   color: white;
   font-weight: bold;
-  /* animation: textFont 1s ease-in-out; */
+  animation: textFont 1s ease-in-out;
 }
 
 @keyframes textFont {
@@ -173,7 +173,7 @@ body {
   width: 99.99vw;
   /* background-color: black; */
 
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -181,28 +181,27 @@ body {
   /* z-index: 20; */
 }
 
-.certiBox,
-.certiBox,
 .certiBox {
   display: flex;
   position: relative;
   cursor: pointer;
-  height: 25rem;
-  width: 30rem;
+  height: 90%;
+  width: 50%;
   background-color: #fff;
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin: 3rem;
-  border: 20px solid white;
+  border: 10px solid white;
   transition-duration: 0.1s;
   border-radius: 10px;
-  box-shadow: 0px 10px 10px 2px rgba(11, 11, 14, 0.185);
+  box-shadow: 0px 10px 10px 2px rgba(11, 11, 14, 0.432),
+    inset 0px 10px 10px 2px rgba(11, 11, 14, 0.185);
   overflow: hidden;
 }
 
 .certiBox:hover {
-  height: 31rem;
-  width: 38rem;
+  height: 95%;
+  width: 55%;
 }
 
 .certiImage img {
@@ -210,6 +209,8 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+
   border: 1px solid rgba(7, 7, 8, 0.144);
 }
 
@@ -577,6 +578,20 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 26%, 0% 100%);
 }
 
+/* about starts here */
+
+#aAbout {
+  display: flex;
+  position: absolute;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 2rem;
+  top: 1rem;
+  color: white;
+  font-weight: bold;
+  z-index: 4;
+}
+
 #aboutOut {
   display: flex;
   position: relative;
@@ -631,15 +646,17 @@ body {
   align-items: center;
   overflow: hidden;
   overflow-y: scroll;
-  top: 7.5rem;
-  right: 7px;
+  top: 17%;
+  right: 0.2%;
   height: 27rem;
   width: 4.5rem;
+  margin-right: 7px;
   background-color: rgba(0, 0, 0, 0.185);
   z-index: 7;
   border-radius: 7px;
+  transition-duration: 0.5s;
   box-shadow: 0px 10px 10px rgba(15, 15, 17, 0.158);
-  /* animation: rightToLeft 1.2s ease-in-out; */
+  animation: rightToLeft 1.2s ease-in-out;
 }
 
 @keyframes rightToLeft {

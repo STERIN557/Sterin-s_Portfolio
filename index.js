@@ -80,9 +80,9 @@ function endStuff(interval) {
   clearInterval(interval);
 }
 
-// setTimeout(() => {
-//   printText();
-// }, 1000);
+setTimeout(() => {
+  printText();
+}, 1000);
 
 // click on the scrollView
 
@@ -100,3 +100,45 @@ for (let o = 0; o < clickImageS.length; o++) {
     buttonArray[o].scrollIntoView();
   });
 }
+
+const linkedIn = document.getElementById("linkedIn");
+const github = document.getElementById("gitHub");
+
+const messager = document.getElementById("messenger");
+const bibleApp = document.getElementById("bibleApp");
+const GitHubW = document.getElementById("GitHubW");
+
+messager.addEventListener("click", () => {
+  window.location.href = "https://mysterious-lowlands-35269.herokuapp.com";
+});
+
+bibleApp.addEventListener("click", () => {
+  window.location.href =
+    "https://play.google.com/store/apps/details?id=com.bibleOffline.bibleforall";
+});
+
+GitHubW.addEventListener("click", () => {
+  window.location.href = "https://github.com/STERIN557";
+});
+
+linkedIn.addEventListener("click", () => {
+  window.location.href = "https://www.linkedIn.com/in/sterin-saji";
+});
+
+github.addEventListener("click", () => {
+  window.location.href = "https://github.com/STERIN557";
+});
+
+// const sideBar = document.getElementById("sideBar");
+
+// document.body.addEventListener("mousemove", () => {
+//   //   console.log("yes");
+//   //   alert("dfsd");
+//   sideBar.style.right = 7 + "px";
+// });
+
+// document.body.addEventListener("mouseout", () => {
+//   //   console.log("yes");
+//   //   alert("dfsd");
+//   sideBar.style.right = -10 + "rem";
+// });
